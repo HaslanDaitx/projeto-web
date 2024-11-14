@@ -18,9 +18,7 @@
         <a href="{{ url('pokemon/create') }}"
             class="bg-yellow-500 hover:bg-yellow-600 text-black py-2 px-4 rounded">Novo
             Pokémon</a>
-    </nav>
-
-    <!-- Content -->
+    </nav> <!-- Content -->
     <div class="container mx-auto mt-8 p-4">
         @yield('content')
     </div>

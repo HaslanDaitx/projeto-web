@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Pokemon;
 use Illuminate\Http\Request;
 
@@ -20,7 +19,15 @@ public function create()
 
 public function store(Request $request)
 {
-    Pokemon::create($request->all());
+    $image = $request->file('image')->store('images', 'public');
+    $pokemon = Pokemon::create(
+    [
+        'nome' => $request->nome,
+        'tipo' => $request->tipo,
+        'ponto_de_poder' => $request->ponto_de_poder,
+        'image' => $image
+        
+    ]);
     return redirect('pokemon')->with('success', 'Pokemon created successfully.');
 }
 

@@ -4,7 +4,8 @@
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     @foreach($pokemon as $bolsomostro)
     <div class="bg-white p-4 rounded shadow-md flex flex-col items-center text-center">
-        <h3 class="text-xl font-bold">{{ $bolsomostro->nome }}</h3>
+        <img src="{{asset('ponto_de_poder/' . $bolsomostro->image)}}" alt="imagemPokemon" class="w-48
+        <h3 class=" text-xl font-bold">{{ $bolsomostro->nome }}</h3>
         <p class="text-gray-700">{{ $bolsomostro->tipo }}</p>
         <p class="text-gray-500">Pontos de Poder: {{ $bolsomostro->ponto_de_poder }}</p>
         <div class="mt-4 flex space-x-2">
